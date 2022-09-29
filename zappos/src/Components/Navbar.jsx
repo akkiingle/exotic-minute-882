@@ -24,10 +24,20 @@ import {
   EmailIcon,
 } from '@chakra-ui/icons';
 
+import New from "../Components/NavComponents/New";
+import Women from "../Components/NavComponents/Women";
+import Men from "../Components/NavComponents/Men";
+import Kids from "../Components/NavComponents/Kids";
+import Sale from "../Components/NavComponents/Sale";
+import Departments from "../Components/NavComponents/Departments";
+import Brand from "../Components/NavComponents/Brands";
+import Clothing from "../Components/NavComponents/Clothing";
+import {NavLink} from "react-router-dom";
+
 function Navbar() {
   return (
-    <Box border="1px solid red">
-      <VStack spacing="0px">
+    <Box border="1px solid red" w='100%'>
+      <VStack spacing="0px" w='100%'>
         <Flex
           display="flex"
           justifyContent="left"
@@ -35,6 +45,7 @@ function Navbar() {
           paddingLeft="3%"
           //   border="1px solid"
         >
+          
           <Box bg="blue.500" padding="5px" width="150px">
             <Image
               src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg"
@@ -44,6 +55,7 @@ function Navbar() {
               margin="auto"
             />
           </Box>
+         
           <Text
             fontSize="20px"
             fontWeight="700"
@@ -58,7 +70,7 @@ function Navbar() {
           width="100%"
           display="flex"
           justifyContent="space-between"
-          paddingRight="2%"
+          paddingRight="7%"
           alignItems="center"
         >
           <Box borderRight="2.5px solid gray" paddingLeft="2.5vw">
@@ -92,7 +104,7 @@ function Navbar() {
             </Menu>
           </Box>
           <Box display={{ base: 'none', sm: 'none', md: 'block', lg: 'block' }}>
-            <Text fontSize="1.2vw" color="white">
+            <Text fontSize="1vw" color="white">
               Every Zappos order comes with FAST, FREE Shipping, plus a FREE
               365-Day Return Policy! More About Shipping & Returns
             </Text>
@@ -108,6 +120,7 @@ function Navbar() {
           width="100%"
         >
           <GridItem>
+          <NavLink to='/'>
             <Image
               boxSize="100px"
               src="https://m.media-amazon.com/images/G/01/zappos/melody/zapposPBS._CB1509642213_.svg"
@@ -115,6 +128,7 @@ function Navbar() {
               width="160px"
               // border='1px solid'
             />
+             </NavLink>
           </GridItem>
           <GridItem>
             <InputGroup
@@ -148,76 +162,22 @@ function Navbar() {
 
         {/* navigation tabs */}
 
-        <HStack  w="100%" spacing="15vw" paddingLeft=" 2.5vw" padding='12px' bg='#F7FAFC'>
+        <HStack  w="100%" spacing="10%"  padding='12px' paddingLeft=" 4vw" bg='#F7FAFC' display={{base: 'none', sm: 'none', md: 'none',lg:'flex'}}>
           <HStack  w="70%">
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              New
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Women
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Men
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Kids
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Departments
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Brands
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Sale
-            </Button>
-            <Button
-              rightIcon={<TriangleDownIcon fontSize="14" mt="1" />}
-              fontSize="1.2vw"
-              bg="transparent"
-              _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
-            >
-              Clothing
-            </Button>
+            <New />
+            <Women/>
+            <Men/>
+            <Kids/>
+            <Departments/>
+            <Brand/>
+            <Sale/>
+            <Clothing/>
           </HStack>
-
-          <HStack fontSize="1.2vw" fontWeight="600" >
+          
+          <HStack fontSize="17px" fontWeight="600" >
+            <NavLink to='/login'>
             <Text>Sign In / Register</Text>
+            </NavLink>
           </HStack>
         </HStack>
       </VStack>

@@ -18,16 +18,16 @@ function New() {
         as={Button}
         rightIcon={<TriangleDownIcon fontSize="12px" marginTop="5px" />}
         bg="transparent"
-        fontSize="17px"
+        fontSize="16px"
         transition="all 0.2s"
         _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
       >
         New
       </MenuButton>
-      <MenuList w='70vw'>
-        <HStack padding="0px 20px">
-          <VStack h='71vh' w="25%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+      <MenuList w='60vw'>
+        <HStack padding="0px 20px" display='flex' alignItems='start'>
+          <VStack w="25%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
               The Style Room
             </MenuItem>
             <MenuItem>Free People: Nostalgic Bohemia</MenuItem>
@@ -40,8 +40,8 @@ function New() {
             <MenuItem>Men's Footwear Refresh</MenuItem>
             <MenuItem>Men's Workwear Inspired</MenuItem>
           </VStack>
-          <VStack textAlign="left" w="25%" fontSize="20px" h="71vh">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack w="25%" fontSize="16px" >
+            <MenuItem fontWeight="600" fontSize="18px">
               New Brands
             </MenuItem>
             <MenuItem>SAOLA</MenuItem>
@@ -57,11 +57,11 @@ function New() {
           <VStack
             textAlign="left"
             w="25%"
-            fontSize="20px"
-            h="71vh"
+            fontSize="16px"
+            
             borderRight="1px solid gray"
           >
-            <MenuItem fontWeight="700" fontSize="20px">
+            <MenuItem fontWeight="600" fontSize="18px">
               New Arrivals
             </MenuItem>
             <MenuItem>The Find</MenuItem>
@@ -77,14 +77,14 @@ function New() {
           <VStack w="25%">
             <VStack>
               <Image
-                h="30vh"
+                
                 src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/September/COOP-SOREL-NEW-ARRIVALS-350x350.jpg"
               ></Image>
               <Text>Shop New SOREL Footwear</Text>
             </VStack>
             <VStack>
               <Image
-                h="30vh"
+                
                 src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/September/fall-style-global.jpg"
               ></Image>
               <Text>Shop Fall Trends</Text>

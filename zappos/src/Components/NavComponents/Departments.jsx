@@ -18,16 +18,16 @@ const Departments = () => {
         as={Button}
         rightIcon={<TriangleDownIcon fontSize="12px" marginTop="5px" />}
         bg="transparent"
-        fontSize="17px"
+        fontSize="16px"
         transition="all 0.2s"
         _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
       >
         Departments
       </MenuButton>
       <MenuList w='70vw' >
-        <HStack padding="0px 20px">
-          <VStack h='87vh' w="20%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+        <HStack padding="0px 20px" display='flex' alignItems='start'>
+          <VStack  w="20%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
               The Style Room
             </MenuItem>
             <MenuItem>Shoes</MenuItem>
@@ -45,8 +45,8 @@ const Departments = () => {
             <MenuItem>Toys & Games</MenuItem>
             <MenuItem>Wedding</MenuItem>
           </VStack>
-          <VStack h='87vh' w="20%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="20%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
               Shops
             </MenuItem>
             <MenuItem>The Style Room</MenuItem>
@@ -64,8 +64,8 @@ const Departments = () => {
             <MenuItem>The_ONES Sneakers</MenuItem>
             
           </VStack>
-          <VStack h='87vh' w="20%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="20%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
               Trending Brands
             </MenuItem>
             <MenuItem>Abercrombie & Fitch</MenuItem>
@@ -78,30 +78,30 @@ const Departments = () => {
             <MenuItem>Crocs</MenuItem>
             <MenuItem>Draper James</MenuItem>
           </VStack>
-          <VStack h='87vh' w="20%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="20%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Shopping Guides
             </MenuItem>
             <MenuItem>Fall Fashion Guide</MenuItem>
             <MenuItem>Kids' Nike & Jordan Styles</MenuItem>
-            <MenuItem fontWeight="700" fontSize="20px">Gift Cards</MenuItem>
+            <MenuItem fontWeight="600" fontSize="18px">Gift Cards</MenuItem>
             <MenuItem>E-Gift Cards</MenuItem>
             <MenuItem>Mail Gift Cards</MenuItem>
-            <MenuItem fontWeight="700" fontSize="20px">Zappos at Work</MenuItem>
+            <MenuItem fontWeight="600" fontSize="18px">Zappos at Work</MenuItem>
             <MenuItem>Learn More</MenuItem>
             <MenuItem>Amazon Customers</MenuItem>
           </VStack>
-          <VStack h='87vh' w="20%">
+          <VStack  w="20%">
             <VStack>
               <Image
-                h="30vh"
+                
                 src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/September/WOMENS-DENIM-BEST-SELLERS-AUGUST-PROMO-350X350.png"
               ></Image>
               <Text>The Denim Shop</Text>
             </VStack>
             <VStack>
               <Image
-                h="30vh"
+               
                 src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/February/ZGC-globalnav-010322.jpg"
               ></Image>
               <Text>Shop Gift Cards</Text>

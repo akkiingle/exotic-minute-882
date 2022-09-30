@@ -36,13 +36,13 @@ import {NavLink} from "react-router-dom";
 
 function Navbar() {
   return (
-    <Box border="1px solid red" w='100%'>
+    <Box  w='100%'>
       <VStack spacing="0px" w='100%'>
         <Flex
           display="flex"
           justifyContent="left"
           width="100%"
-          paddingLeft="3%"
+          paddingLeft="6%"
           //   border="1px solid"
         >
           
@@ -51,7 +51,7 @@ function Navbar() {
               src="https://m.media-amazon.com/images/G/01/zappos/melody/black-logo.svg"
               alt="Dan"
               filter="invert(100%)"
-              height="25px"
+              height="20px"
               margin="auto"
             />
           </Box>
@@ -60,7 +60,7 @@ function Navbar() {
             fontSize="20px"
             fontWeight="700"
             borderRight="2.5px solid gray"
-            padding="0px 20px"
+            padding="0px 18px"
           >
             vrsnL
           </Text>
@@ -70,18 +70,18 @@ function Navbar() {
           width="100%"
           display="flex"
           justifyContent="space-between"
-          paddingRight="7%"
+          paddingRight="8%"
           alignItems="center"
         >
-          <Box borderRight="2.5px solid gray" paddingLeft="2.5vw">
+          <Box borderRight="2.5px solid gray" paddingLeft="5vw">
             <Menu>
               <MenuButton
                 as={Button}
                 rightIcon={<TriangleDownIcon fontSize="12px" marginTop="5px" />}
                 bg="transparent"
                 color="white"
-                fontSize="22px"
-                fontWeight="700"
+                fontSize="18px"
+                fontWeight="600"
                 transition="all 0.2s"
                 _hover={{ bg: 'transprant' }}
                 _expanded={{ bg: 'blue.500' }}
@@ -122,10 +122,10 @@ function Navbar() {
           <GridItem>
           <NavLink to='/'>
             <Image
-              boxSize="100px"
+              boxSize="70px"
               src="https://m.media-amazon.com/images/G/01/zappos/melody/zapposPBS._CB1509642213_.svg"
               alt="Dan Abramov"
-              width="160px"
+              width="110px"
               // border='1px solid'
             />
              </NavLink>
@@ -139,21 +139,21 @@ function Navbar() {
                 children={<SearchIcon />}
                 bg="transparent"
                 borderRight="none"
-                h="50px"
+                h="40px"
               />
               <Input
                 placeholder="Search for shoes, clothes, etc."
                 borderLeft="none"
-                h="50px"
+                h="40px"
               />
-              <InputRightAddon children="Search" h="50px" />
+              <InputRightAddon children="Search" h="40px" />
             </InputGroup>
           </GridItem>
           <GridItem>
             <Button
               leftIcon={<EmailIcon />}
               border={'2.5px solid #9AE6B4'}
-              h="60px"
+              h="40px"
             >
               MY CART
             </Button>
@@ -162,9 +162,9 @@ function Navbar() {
 
         {/* navigation tabs */}
 
-        <HStack  w="100%" spacing="10%"  padding='12px' paddingLeft=" 4vw" bg='#F7FAFC' display={{base: 'none', sm: 'none', md: 'none',lg:'flex'}}>
+        <HStack  w="100%" spacing="10%"   paddingLeft=" 5vw" bg='#F7FAFC' display={{base: 'none', sm: 'none', md: 'none',lg:'flex'}}>
           <HStack  w="70%">
-            <New />
+            /<New />
             <Women/>
             <Men/>
             <Kids/>
@@ -174,7 +174,7 @@ function Navbar() {
             <Clothing/>
           </HStack>
           
-          <HStack fontSize="17px" fontWeight="600" >
+          <HStack fontSize="16px" fontWeight="600" >
             <NavLink to='/login'>
             <Text>Sign In / Register</Text>
             </NavLink>

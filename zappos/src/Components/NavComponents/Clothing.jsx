@@ -18,16 +18,16 @@ const Clothing = () => {
         as={Button}
         rightIcon={<TriangleDownIcon fontSize="12px" marginTop="5px" />}
         bg="transparent"
-        fontSize="17px"
+        fontSize="16px"
         transition="all 0.2s"
         _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
       >
         Clothing
       </MenuButton>
-      <MenuList  w='90vw' h='80vh'>
-        <HStack padding="0px 20px">
-          <VStack h='87vh' w="16%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+      <MenuList  w='90vw' >
+        <HStack padding="0px 20px" display='flex' alignItems='start'>
+          <VStack w="16%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Women's Clothing
             </MenuItem>
             <MenuItem>Shirts & Tops</MenuItem>
@@ -44,8 +44,8 @@ const Clothing = () => {
             <MenuItem>Petite</MenuItem>
             <MenuItem>Shop All Women's Clothing</MenuItem>
           </VStack>
-          <VStack h='87vh' w="16%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="16%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Men's Clothing
             </MenuItem>
             <MenuItem>Shirts & Tops</MenuItem>
@@ -59,8 +59,8 @@ const Clothing = () => {
             <MenuItem>Big & Tall</MenuItem>
             <MenuItem>Shop All Men's Clothing</MenuItem>
           </VStack>
-          <VStack h='87vh' w="16%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack w="16%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Kids' Clothing
             </MenuItem>
             <MenuItem>Shirts & Tops</MenuItem>
@@ -75,8 +75,8 @@ const Clothing = () => {
             <MenuItem>Juniors & Teen</MenuItem>
             <MenuItem>Shop All Kids' Clothing</MenuItem>
           </VStack>
-          <VStack h='87vh' w="16%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="16%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Featured
             </MenuItem>
             <MenuItem>The Style Room</MenuItem>
@@ -92,8 +92,8 @@ const Clothing = () => {
             <MenuItem>The Workout Shop</MenuItem>
             <MenuItem>Luxury Clothing on VRSNL</MenuItem>
           </VStack>
-          <VStack h='87vh' w="16%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="16%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             New Arrivals
             </MenuItem>
             <MenuItem>Abercrombie & Fitch</MenuItem>
@@ -104,17 +104,17 @@ const Clothing = () => {
             <MenuItem>Shop All New Clothing Arrivals</MenuItem>
           </VStack>
           
-          <VStack h='87vh' w="16%">
+          <VStack  w="16%">
             <VStack>
               <Image
-                h="30vh"
+                
                 src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/August/WOMENS-ATHLETIC-NEW-ARRIVALS-AUGUST-TRIPTYCH-350X350.png"
               ></Image>
               <Text>Shop Yoga</Text>
             </VStack>
             <VStack>
               <Image
-                h="30vh"
+                
                 src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/July/ENS-SUMMER-WORKOUT-CLOTHING-GLOBAL-NAV.jpg"
               ></Image>
               <Text>Shop Workout Clothing</Text>

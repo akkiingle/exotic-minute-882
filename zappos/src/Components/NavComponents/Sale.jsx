@@ -18,16 +18,16 @@ const Sale = () => {
       as={Button}
       rightIcon={<TriangleDownIcon fontSize="12px" marginTop="5px" />}
       bg="transparent"
-      fontSize="17px"
+      fontSize="16px"
       transition="all 0.2s"
       _hover={{ bg: 'transprant', borderBottom: '2px solid ' }}
     >
      Sale
     </MenuButton>
-    <MenuList w='70vw' h='70vh'>
-      <HStack padding="0px 20px">
-        <VStack h='87vh' w="20%" fontSize="20px">
-          <MenuItem fontWeight="700" fontSize="20px">
+    <MenuList w='70vw'>
+      <HStack padding="0px 20px" display='flex' alignItems='start'>
+        <VStack  w="20%" fontSize="16px">
+          <MenuItem fontWeight="600" fontSize="18px">
             Women's Sale
           </MenuItem>
           <MenuItem>Sneakers & Athletic</MenuItem>
@@ -40,8 +40,8 @@ const Sale = () => {
           <MenuItem>Denim</MenuItem>
           <MenuItem>All Women's Sale</MenuItem>
         </VStack>
-        <VStack h='87vh' w="20%"fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+        <VStack w="20%"fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Men's Sale
             </MenuItem>
             <MenuItem>Sneakers & Athletic</MenuItem>
@@ -54,8 +54,8 @@ const Sale = () => {
             <MenuItem>Swim</MenuItem>
             <MenuItem>All Men's Sale</MenuItem>
           </VStack>
-          <VStack h='87vh' w="20%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="20%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Kids' Sale
             </MenuItem>
             <MenuItem>Sneakers</MenuItem>
@@ -68,8 +68,8 @@ const Sale = () => {
             <MenuItem>Sleepwear</MenuItem>
             <MenuItem>All Kids Sale</MenuItem>
           </VStack>
-          <VStack h='87vh' w="20%" fontSize="20px">
-            <MenuItem fontWeight="700" fontSize="20px">
+          <VStack  w="20%" fontSize="16px">
+            <MenuItem fontWeight="600" fontSize="18px">
             Featured Sale
             </MenuItem>
             <MenuItem>Crocs</MenuItem>
@@ -77,24 +77,24 @@ const Sale = () => {
             <MenuItem>Hoka</MenuItem>
             <MenuItem>Dresses</MenuItem>
             <MenuItem>Sandals</MenuItem>
-            <MenuItem fontWeight="700" fontSize="20px">Programs</MenuItem>
+            <MenuItem fontWeight="600" fontSize="18px">Programs</MenuItem>
             <MenuItem>Education Discount</MenuItem>
             <MenuItem>Military Discount</MenuItem>
           </VStack>
-        <VStack h='87vh' w="20%">
+        <VStack  w="20%">
           <VStack>
             <Image
-              h="30vh"
+              
               src="https://m.media-amazon.com/images/G/01/2022/Global-Nav/September/LUCKY-BRAND-WOMENS-BASEL-BOOTIE-GLOBAL-NAV-350x350.jpg"
             ></Image>
-            <Text>Shop Boots On Sale</Text>
+            <Text fontWeight="600" fontSize="18px">Shop Boots On Sale</Text>
           </VStack>
           <VStack>
             <Image
-              h="30vh"
+              
               src="https://m.media-amazon.com/images/G/01/2022/MMK/ZAPPOS_350x350_PLATE.jpg"
             ></Image>
-            <Text>Shop Sale</Text>
+            <Text fontWeight="600" fontSize="18px">Shop Sale</Text>
           </VStack>
         </VStack>
       </HStack>

@@ -39,12 +39,12 @@ const Footer = () => {
                 md: 'row',
                 lg: 'row',
               }}
-              alignItems="start"
+            //   alignItems="start"
               gap="5"
             >
               <Input
                 type="email"
-                w="300px"
+                w={{base:'100%',sm:'100%',md:'100%',lg:'30%'}}
                 bg="white"
                 placeholder="Email Address"
               />
@@ -53,7 +53,7 @@ const Footer = () => {
                 bg="transparent"
                 type="submit"
                 border="2px solid white"
-                w="300px"
+                w={{base:'100%',sm:'100%',md:'100%',lg:'30%'}}
                 leftIcon={<EmailIcon />}
               >
                 SUBSCRIBE TO ZAOOPS EMAIL
@@ -226,7 +226,7 @@ const Footer = () => {
         alignItems="start"
         padding="20px 5%"
       >
-        <HStack>
+        <Flex gap='2' alignItems='center' flexWrap='wrap'>
           <Text>Terms of Use</Text>
           <Center height="20px">
             <Divider orientation="vertical" size="1px" />
@@ -244,7 +244,7 @@ const Footer = () => {
             <Divider orientation="vertical" size="1px" />
           </Center>
           <Text>24/7 Customer Service (800) 927-7671</Text>
-        </HStack>
+        </Flex>
         <Text>© 2009-2022 - Zappos.com LLC or its affiliates</Text>
       </VStack>
     </VStack>

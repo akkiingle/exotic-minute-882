@@ -1,20 +1,25 @@
-import { ColorModeScript,ChakraProvider } from '@chakra-ui/react';
+import { ColorModeScript, ChakraProvider } from '@chakra-ui/react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter} from "react-router-dom";
-
+import { BrowserRouter } from 'react-router-dom';
+import AuthContextProvider from './Context/AuthContext';
+import CartContextProvider from './Context/CartContext';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <ChakraProvider>
-    <BrowserRouter>
-    <ColorModeScript />
-    <App />
-    </BrowserRouter>
-  </ChakraProvider>
+  <AuthContextProvider>
+    <CartContextProvider>
+      <ChakraProvider>
+        <BrowserRouter>
+          <ColorModeScript />
+          <App />
+        </BrowserRouter>
+      </ChakraProvider>
+    </CartContextProvider>
+  </AuthContextProvider>
 );
 
 // If you want your app to work offline and load faster, you can change

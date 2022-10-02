@@ -101,7 +101,7 @@ const Cart = () => {
           <DrawerHeader>Your Cart</DrawerHeader>
 
           <DrawerBody>
-            {cartData ? (
+            {cartData.length!==0 ? (
               cartData.map(ele => (
                 <VStack spacing="5" padding="3px 0px" w="100%">
                   <HStack

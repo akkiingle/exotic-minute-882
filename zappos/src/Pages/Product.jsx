@@ -19,12 +19,13 @@ import originaldata from '../csvjson.json';
 import {CartContext} from "../Context/CartContext";
 import { AuthContext } from '../Context/AuthContext';
 import { Navigate } from 'react-router-dom';
-const cartArr=[];
+var cartArr;
 const Product = () => {
  
   const [data, setData] = useState(originaldata.data);
   const [num, setNum] = useState(0);
-  const {setCartData} =useContext(CartContext);
+  const {setCartData,cartData} =useContext(CartContext);
+  cartArr=cartData
   const {state} =useContext(AuthContext);
   const handleSort = e => {
   

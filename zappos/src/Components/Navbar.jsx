@@ -33,6 +33,8 @@ import Departments from "../Components/NavComponents/Departments";
 import Brand from "../Components/NavComponents/Brands";
 import Clothing from "../Components/NavComponents/Clothing";
 import {NavLink} from "react-router-dom";
+import SignUp from '../Pages/SignUp';
+import Cart from "../Pages/Cart";
 
 function Navbar() {
   return (
@@ -150,19 +152,13 @@ function Navbar() {
             </InputGroup>
           </GridItem>
           <GridItem>
-            <Button
-              leftIcon={<EmailIcon />}
-              border={'2.5px solid #9AE6B4'}
-              h="40px"
-            >
-              MY CART
-            </Button>
+            <Cart/>
           </GridItem>
         </Grid>
 
         {/* navigation tabs */}
 
-        <HStack  w="100%" spacing="10%"   paddingLeft=" 5vw" bg='#F7FAFC' display={{base: 'none', sm: 'none', md: 'none',lg:'flex'}}>
+        <HStack  w="100%" spacing="10%" padding='5px 0px'  paddingLeft=" 5vw" bg='#F7FAFC' display={{base: 'none', sm: 'none', md: 'none',lg:'flex'}}>
           <HStack  w="70%">
             /<New />
             <Women/>
@@ -175,10 +171,9 @@ function Navbar() {
           </HStack>
           
           <HStack fontSize="16px" fontWeight="600" >
-            <NavLink to='/login'>
-            <Text>Sign In / Register</Text>
-            </NavLink>
+            <SignUp/>
           </HStack>
+
         </HStack>
       </VStack>
     </Box>

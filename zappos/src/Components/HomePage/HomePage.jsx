@@ -8,33 +8,34 @@ import {
   VStack,
   Grid,
   GridItem,
+  useToast
 } from '@chakra-ui/react';
-import React from 'react';
+import React,{useContext} from 'react';
+
+import { NavLink } from 'react-router-dom';
 import Component1 from './Component1';
 import Component2 from './Component2';
 import Component8 from './Component8';
-
+import { AuthContext } from '../../Context/AuthContext';
 const HomePage = () => {
+  const {state}=useContext(AuthContext);
+  const toast = useToast()
   return (
-    <Box >
+    <Box>
       {/* banner */}
 
       <Box
-        // border="1px solid green"
         textAlign="center"
         position="relative"
         w={{ base: 'auto', sm: 'auto', md: 'auto', lg: '88%' }}
-        // w="76%"
         margin="auto"
       >
         <Image
           src="https://m.media-amazon.com/images/G/01/2022/homepage9.26/COOP-FALL-CAMPAGIN-WOMENS-STEVE-MADDEN-HERO-1440x700.jpg"
           margin="auto"
-          //   w="80%"
         ></Image>
 
         <Box
-          //   border="1px solid"
           w="350px"
           h="300px"
           position="absolute"
@@ -54,7 +55,6 @@ const HomePage = () => {
             trousers, and other key pieses fro the season!
           </Text>
           <Container
-            // size="md"
             height="60px"
             width="300px"
             border="2px"
@@ -77,7 +77,6 @@ const HomePage = () => {
           Shop Popular Categories
         </Text>
         <HStack
-          // border="1px solid"
           margin="auto"
           display="grid"
           gridTemplateColumns={{
@@ -88,10 +87,31 @@ const HomePage = () => {
           }}
           gap="1%"
         >
-          <Component1
-            src="https://m.media-amazon.com/images/I/81crO3+x7YL._AC_SX255_.jpg"
-            title="Sneakers & Athletic Shoes"
-          />
+          {/* <NavLink to='/product'> */}
+          {state.isAuth ? (
+            <NavLink to="/product">
+              <Component1
+                src="https://m.media-amazon.com/images/I/81crO3+x7YL._AC_SX255_.jpg"
+                title="Sneakers & Athletic Shoes"
+              />
+            </NavLink>
+          ) : (
+            <Box onClick={()=>toast({
+              title: 'User is not logged in',
+              description: "To expolre more products, you must login",
+              status: 'error',
+              duration: 5000,
+              isClosable: true,
+              
+            })}>
+            <Component1
+              src="https://m.media-amazon.com/images/I/81crO3+x7YL._AC_SX255_.jpg"
+              title="Sneakers & Athletic Shoes"
+            />
+          </Box>
+          )}
+
+          {/* </NavLink> */}
           <Component1
             src="https://m.media-amazon.com/images/I/71AQ9q89+gL._AC_SX255_.jpg"
             title="Ankle Booties"
@@ -128,7 +148,6 @@ const HomePage = () => {
           lg: 'repeat(3,1fr)',
         }}
         gap="2%"
-        // border='1px solid'
       >
         <Component2
           src="https://m.media-amazon.com/images/G/01/2022/womens-shoes/WOMENS-HEELS-PUMPS-AUGUST-PROMO-500X500.jpg"
@@ -173,21 +192,17 @@ const HomePage = () => {
         }}
         gap="1%"
         justifyContent="center"
-        // border="1px solid"
       >
         <Box
           bg="#ECCB9C"
           h={{ base: '585px', md: '585px', lg: '39vw' }}
           display="flex"
           alignItems="center"
-          // w='98%'
         >
           <VStack
-            // border="1px solid"
             spacing="3%"
             padding="0 9%"
             textAlign="center"
-            // h='60%'
             w="100%"
           >
             <Image
@@ -206,7 +221,6 @@ const HomePage = () => {
         <Image
           maxHeight="99%"
           maxWidth="100%"
-          // border="1px solid"
           src="https://m.media-amazon.com/images/G/01/2022/homepage9.26/COOP-SOREL-NEW-ARRIVALS-DESKTOP-RIGHT-2X-1268x1268.jpg"
         ></Image>
       </HStack>
@@ -215,9 +229,15 @@ const HomePage = () => {
       <Grid
         w="95%"
         margin="auto"
-        templateColumns={{ base: '1fr', md: '1fr', lg: '30% 65%' }}
         mt="50px"
         gap="2%"
+        display={{ base: 'flex', md: '', lg: '' }}
+        flexDirection={{
+          base: 'column-reverse',
+          sm: 'column-reverse',
+          md: 'row',
+          lg: 'row',
+        }}
       >
         <VStack
           alignItems="center"
@@ -248,14 +268,23 @@ const HomePage = () => {
       <Grid
         w="95%"
         margin="auto"
-        templateColumns={{ base: '1fr', md: '1fr', lg: '70% 27%' }}
+        templateColumns={{ base: '1fr', md: '70% 27%', lg: '70% 27%' }}
         mt="50px"
         gap="1%"
       >
         <GridItem>
           <Image src="https://m.media-amazon.com/images/G/01/2022/the-style-room/FASHION-THE-STYLE-ROOM-7-FAM-CASUAL-FRIDAYS-SEPTEMBER-960x500.jpg"></Image>
         </GridItem>
-        <VStack justifyContent="center" gap="2%" alignItems="start">
+        <VStack
+          justifyContent="center"
+          gap="2%"
+          alignItems={{
+            base: 'center',
+            sm: 'center',
+            md: 'start',
+            lg: 'start',
+          }}
+        >
           <Image src="https://m.media-amazon.com/images/G/01/zappos/landing/opus/2021/homepage/thestyleroom/The-Style-Room-Logo.svg"></Image>
           <Text fontSize="25px" fontWeight="500">
             Where Will Your 7 For All Minkind Take You?
@@ -275,12 +304,13 @@ const HomePage = () => {
 
       {/* component 8 */}
 
-      <Grid  w="95%"
+      <Grid
+        w="95%"
         margin="auto"
         templateColumns={{ base: '1fr', md: '1fr', lg: 'repeat(3,1fr)' }}
         mt="50px"
         gap="1%"
-        >
+      >
         <Component8
           src="https://m.media-amazon.com/images/G/01/zappos/landing/opus/2021/homepage/Zappos_ONE_Retina.png"
           title="Diversity Equity & Inclusion"
